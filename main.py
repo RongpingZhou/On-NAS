@@ -75,7 +75,8 @@ def TFML(config, task_optimizer_cls = Darts, meta_optimizer_cls = NAS_Reptile ):
         raise RuntimeError(f"Dataset {config.dataset} is not supported.")
 
     # task distribution
-    task_distribution = task_distribution_class(config, download=True)            
+    task_distribution = task_distribution_class(config, download=True)
+    # task_distribution = task_distribution_class(config, download=False)
     
     # meta model 
     normalizer = _init_alpha_normalizer(
@@ -1170,4 +1171,5 @@ if __name__ == "__main__":
     # Logging
     logger = utils.get_logger(os.path.join(args.path, f"{args.name}.log"))
     args.logger = logger
+    print("main.py: args: ", args)
     TFML(args)  

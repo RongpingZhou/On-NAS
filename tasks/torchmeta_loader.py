@@ -169,6 +169,12 @@ def create_miniimagenet_data_loader(
     Returns:
         A torchmeta :class:`BatchMetaDataLoader` object.
     """
+    print("torchmeta_loader.py: create_miniimagenet_data_loader: root", root)
+    print("torchmeta_loader.py: create_miniimagenet_data_loader: n_shot", n_shot)
+    print("torchmeta_loader.py: create_miniimagenet_data_loader: k_way", k_way)
+    print("torchmeta_loader.py: create_miniimagenet_data_loader: meta_split", meta_split)
+    print("torchmeta_loader.py: create_miniimagenet_data_loader: n_query", n_query)
+    print("torchmeta_loader.py: create_miniimagenet_data_loader: download", download)
     dataset = miniimagenet(
         root,
         n_shot,
